@@ -1,0 +1,61 @@
+<><><><><><><>
+<>   PHP    <>
+<><><><><><><>
+Por mais que se tenha toda uma evolução do HTML5 e dos navegadores que conhecemos atualmente, a Web ainda é um ambiente bastante restrito. O browser é incapaz de executar qualquer tipo de comando e coisas que às vezes são faceis de se fazer em outras linguagens de programação são bastante complexas em HTML ou JS.
+Dessa forma, todo projeto que envolve Web de forma profissional não é apenas arquivos HTML, CSS e JS, mas tambem envolve uma infrastrutura de servidor. Existem diversas linguagens e servidores que podemos usar. Linguagem temos, PHP, Java, Ruby, Pyton, C#. Como servidores temos Apache, Tomcat, JBoss, IIS, nginx e outros. Nesta atividade usaremos a linguagem PHP com foco maior no uso do servidor Apache para nosso desenvolvimento.
+A atividade consiste em:
+1. Instalar o PHP em sua maquina, no Windows existe um pacote bem famoso chamado XAMPP da BitNami. Nele instalamos o PHP, MySQL e o servidor Apache em um clique (como sempre), alem de diversas dependencias. Caso esteja usando Linux ou Mac, eles costumam vir com PHP instalado. Verique a versão é igual ou superior a 5.4 para podermos executar o PHP em nossos arquivos. Alem disso, modifique o seu arquivo .html para .php, agora poderemos misturar codigo html com php, alem disso poderemos trabalhar com o PHP!
+2. Como sabemos, toda pagina HTML possui por estrutura basica um cabeçalho e rodape, no entanto você programador sabe muito bem que copiar e colar eles repetidamente em todas as suas paginas é um trabalho exaustivo! Podemos utilizar uma tecnologia no servidor PHP que faz esse trabalho dinamicamente. Criamos um arquivo .php separada que **encapsula** o codigo do cabeçalho e do rodape (separadamente). Depois incluimos esse codigo em todas as paginas usando o comando include. Implemente isso em seu site!
+3. **FORMULARIO:** todo formulario no HTML tem seus dados enviados para o servidor quando submetido. Trabalhamos encima da tag <form> .. </form> que possui atributos, vale ressaltar 2 deles:
+-action: pagina que vai receber os dados preenchidos;
+-method: maneira como os dados são enviados e possui dois valores POST e GET, ambos enviam dados do formulario ao servido. 
+Crie uma pagina adcional simples com o nome "Contate-nos" e tera extensão .php, nela conterá um formulario basico (nome, e-mail, comentario, e o que mais for a cara de seu site). Após criar o formulario basico, se comunique com o php atraves do $_POST ou $_GET, enviando os dados para o seu e-mail, por exemplo.
+
+<><><><><><><>
+<>    SQL   <>
+<><><><><><><>
+Na maioria dos sistemas Web, os dados que estamos lidando ficam separados em um banco de dados ao invés de ficarem escritos diretamente no HTML. Em uma loja virtual, por exemplo, os produtos seriam cadastrados nesse banco de dados externo e depois seus dados são exibidos na pagina .php. Esses e quaisquer outros dados são como uma grande planilha no Excel que possui varias tabelas dentro. Cada tabela tem colunas com campos especificos e muitas linhas com os dados cadastrados.
+Para maniplar os dados destas tabelas, utilizamos a linguagem separada conhecida como SQL. Seu principal objetivo é permitir que façamos buscas nas tabelas por determinados tipos de dados afim de inserir, remover e atualizar os mesmo. Vale ressaltar que o SQL serve apenas para acessar banco de dados.
+Existem diversos bancos de dados, como MySQL, Oracle, SQL Server, DB2, Postgree, SQLite. Todos aceitam SQL. Alem disso, para ajuda a visualizar e administrar o banco de dados podemos instalar alguma interface grafica compativel. Na nossa atividade utilizaremos como banco de dados um à gosto do Trainee, utilizarei adiante o MySQL como exemplo, e como interface grafica o phpMyAdmin, que, caso você ja tenha completado a atividade do PHP então você ja tem o XAMPP e portanto tudo que precisamos para começar a desenvolver.
+A atividade consiste em:
+1. Conecte-se com o banco de dados utilizando a função do banco de dados escolhido e armazene na variavel '$conexao';
+	-mysqli_connect(onde_conectar, usuario, senha, banco de dados disponivel);
+2. Mande o banco de dados processar um certo comando SQL, como o SELECT, utilizando uma função do banco de dados e armazene na variavel '$dados';
+	-mysqli_query($conexao, SQL da busca);
+3. Transforme os dados capturados da tabela em algo usavel no PHP. Uma maneira mais usual é transformar os dados num array e armazene na variavel '$infos';
+	-mysqli_fetch_array($dados);
+Isso significa que podemos acessar os emails dos visitantes fazendo por exemplo $infos['email'] e assim por diante para cada coluna.
+4. Faça a pagina mostrar as informações de cada visitante que comentou sobre algo utilizando seu id como busca. Para isso, deve-se utilizar uma clausula de SQL no SELECT.
+
+
+<><><><><><><>
+<>    BD    <>
+<><><><><><><>
+Um banco de dados é um conjunto de dados relacionados, logicamente coerentes, utilizado por programas da aplicação em uma organização. Possui sistemas de gerenciamento (SGBD) e sua arquitetura propria com 3 niveis (interno, conceitual, externo). 
+O Modelo de banco de dados mais usual é o modelo relacional que consiste em armazenamento de dados em tabelas bidimensionais, chamadas relações. o modelo SGBDR (sistema de gerenciamento de banco de dados relacional) possui as seguintes caracteristicas:
+	-Nome: cada relação em um banco de dados relacional deve ter um nome que seja unico;
+	-Atributos: cada coluna em uma relação é chamada de atributo. Atributos são os titulos das colunas. Cada um deles dá
+	significado aos dados ali armazenados;
+	-Tupla: cada linha em uma relação é chamada de tupla, que define um conjunto de valores de atributos.
+Existem diversas operações com relações, são exemplos: inserção, exclusão, atualização, seleção, projeção, dentre outros.
+Alem disso, existe o projeto de banco de dados que consiste em 2 etapas:
+	1. Pesquisar por potenciais usuarios de banco de dados;
+	2. Construir um modelo entidade-relacionamento (MER).
+**MER:** Nesta etapa, o projetista de banco de dados cria um diagrama entidade-relacionamento (E-R) para mostrar as entidade, para quais as informações precisam ser armazenadas, e tambem a relação entre elas. Diagramas E-R utilizam diversas formas geometricas, tais como:
+	-Retangulos representam conjuntos de entidades;
+	-Elipses representam atributos;
+	-Losangos representam conjuntos relacionamentos;
+	-Linhas vinculam atributos a conjuntos e conjuntos entidade a conjuntos relacionamento.
+Alem disso, em banco de dados existe a normalização. A normalização é o processo pelo qual um determinado conjunto de relações é transformado em um novo conjunto, com uma estrutura mais solida. A normalização é necessaria para permitir que qualquer relação de banco de dados seja representada a fim de permitir que linguagens, como SQL, utilizem poderosas operações de recuperação, compostas de operações atomicas, oara remover anomalias na inserção, exclusão e atualização, e reduzir a necessidade de reestruturar o bando de dados à medida que novos tipos de dados são adicionados. Pesquisando mais a fundo sobre este processos, existem as formas normais, as quais não entrarei em detalhes no momento.
+A atividade consiste em:
+-Criar um banco de dados para uma livraria, de acordo com os requisitos propostos abaixo, utilize o MER para representar esse banco de dados:
+	1.A livraria deseja manter um cadastro de clientes.
+	2. Sobre cada cliente, é importante manter seu endereço, telefone, CPF e lista dos livros que este cliente já comprou. Para cada compra, é importante guardar a data em que esta foi realizada.
+	3. Um cliente pode comprar muitos livros. Um livro pode ser vendido para mais de um cliente pois geralmente há vários livros em estoque.
+	4. Um cliente pode ser pessoa física ou jurídica. Se for pessoa jurídica, o seu identificador deve ser o CNPJ.
+	5. A livraria compra livros livros de editoras.
+	6. Sobre as editoras, a livraria precisa de seu código, endereço, telefone de contato, e o nome de seu gerente.
+	7. Cada cliente tem um código único.
+	8. Deve-se manter um cadastro sobre cada livro na livraria. Para cada livro, é importante armazenar o nome do autor, assunto, editora, ISBN e a quantidade dos livros em estoque.
+	9. Editoras diferentes não fornecem o mesmo tipo de livro.
+-Faça o mapeamento deste banco para o modelo relacional

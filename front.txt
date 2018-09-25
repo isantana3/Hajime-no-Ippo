@@ -1,0 +1,82 @@
+<><><><><><>
+<>  HTML  <>
+<><><><><><>
+Atividade HTML -
+
+Em primeiro lugar, é necessário você estudar HTML5 e CSS3, seguem os sites para você aprender:
+
+Pra você ir treinando, vão ser passados alguns "exercícios"  pra acompanhar seu desenvolvimento, qualquer dúvida, por e-mail ou pessoalmente.
+
+Os sites são para você tirar dúvidas específicas sobre o desenvolvimento.
+
+HTML5
+https://www.w3schools.com/html/default.asp
+
+Vou anexar 3 slides do Prof. Dany Sanchez, você pode seguir o roteiro dele, o conteúdo é muito bom. (Não repasse esse material pra ninguém por favor).
+
+Os slides contém uma breve introdução sobre aplicações Web, e como são divididas, e começa a parte do HTML5 (que são divididas em duas partes)
+
+
+Para a primeira atividade, vou querer que você faça um site em HTML5 (seguindo os padrões de desenvolvimento) sobre um dos seguintes temas (ou outro sugerido por você)
+
+- Um time ou esporte
+- Um assunto científico
+- Um jogo digital
+- Um filme ou série
+- Computação (Qualquer sub-área)
+
+O site precisa ter : títulos, parágrafos, imagens, enlaces (links para outras páginas), imagens, tabelas, listas (todo conteúdo explicado nos slides)
+
+O site não deve conter qualquer coisa que não seja HTML (Css por exemplo)
+
+O site deve ter no mínimo três páginas até no máximo dez páginas, deve conter enlaces para outras páginas (um link para outra página) e um link para uma mesma seção em uma página (âncora).
+
+Não se preocupe, o site vai ficar "feio" esteticamente mesmo, depois disso, vamos aplicando estilos e melhorando ele.
+
+Quando terminar, faça upload do arquivo com as pastas do seu projeto em um .zip com seu nome (o primeiro e último) e anexe-o ao cartão "Entregas", por exemplo o meu ficaria (prabhat_oliveira.zip).
+
+
+<><><><><><>
+<>  CSS   <>
+<><><><><><>
+Atividade CSS - 
+Antes de tudo, seu site HTML deve passar pelo validador HTML, caso não haja nenhum problema, passe para próxima etapa.
+
+Validador HTML:
+https://validator.w3.org/
+
+**Não deve-se usar Framework ainda**
+
+Aqui está o site com os atributos css:
+
+https://www.w3schools.com/css/
+
+​Em anexo os materiais.
+
+A próxima atividade consiste em:
+
+- Criar um layout para seu site, onde deve aparecer um menu de navegação (superior, esquerda ou direita), conteúdo e rodapé
+- Todo o layout deve ser responsivo​ (utilize dimensões relativas para que se adapte a diferentes tamanhos e resoluções)
+- (Desafio) Após o item 1 e 2 serem completados, aplique tecnicas de CSS3 para adaptar seu site tambem para dispositivos moveis, ou seja, seu site deve rodar tanto em desktop quanto em mobile, de forma enxuta em ambas plataformas!
+​- Valide a folha de estilos (CSS) através do link:
+https://jigsaw.w3.org/css-validator/​
+
+<><><><><><>
+<>   JS   <>
+<><><><><><>
+Ate agora fizemos um site em HTML e estilizamos ele completamente em CSS, no entanto vemos que não há tanta interatividade com o usuario do site ao passo que temos apenas aquele negocio todo estatico. Uma boa forma de conseguir essa interatividade é atraves da linguagem de programação JavaScript, a mais popular no desenvolvimento Web! JavaScript é é responsavel por praticamente qualquer tipo de dinamismo que podemos querer em nossas paginas. Vale ressaltar ainda, que se usassemos todo o poder que ela tem para oferecer, podemos chegar a resultados impressionantes tais como o Gmail, Google Maps e Google Docs!
+Dentro de nossos navegadores existem uma serie de ferramentas imbutidas chamadas de Developer Tools. Podemos acessar ainda um console atraves do atalho: control + shift + c, e ir diretamente na barra "console". La podemos executar e testar codigos em JavaScript.
+Bom, a atividade em questão consiste em implementar um Banner Rotativo em sua pagina, selecione quantas imagens quiser e crie uma função para fazer a troca de imagens a cada n segundos. Alem disso, podemos considerar que o visitante de sua pagina queira parar em uma imagem que o chamou atenção, então, como fariamos isso? Depois de apreciar a imagem, o usuario pode querer retornar à rotatividade do banner, o que fariamos para sair do pause?
+
+
+<><><><><><><><><><>
+<>  MATERIALIZE   <>
+<><><><><><><><><><>
+Temos agora um site, feito em HTML, estilizado com CSS e criamos uma interatividade com o JS. 
+Uma tendência no mundo front-end é o uso de frameworks CSS que possuem estilos base para nossa página. Ao inves de começarmos o projeto do zero, criando todo estilo na mão que nem fizemos anteriormente, existem os frameworks que trazem consigo toda a base construida de onde partiremos nossa aplicação.
+Nessa atividade usaremos o framework Materialize, que pode ser baixado no link que segue:
+https://materializecss.com/
+Para usar o Materialize, basta incluirmos o seu CSS na pagina na forma de:
+<link rel="stylesheet" href="css/materialize.css">
+A partir dai temos uma serie de beneficios ja trazidos pelo materialize.
+Com o CSS incluso no seu site, devemos modificar a sua pagina principal (index.html) de tal forma que usa os beneficios que o materialize nos da.
